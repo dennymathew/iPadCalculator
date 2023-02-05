@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CalculatorView: View {
-    @State var currentDisplay = "0"
+    @State private var currentDisplay = "0"
     @State private var calculator = Calculator()
     @State private var isDraggingHandled = false
     @State private var isPresentingPopover = true
