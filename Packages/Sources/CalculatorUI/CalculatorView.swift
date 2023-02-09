@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import CalculatorKit
 
-struct CalculatorView: View {
+public struct CalculatorView: View {
     @State private var currentDisplay = "0"
     @State private var calculator = Calculator()
     @State private var isDraggingHandled = false
     @State private var isPresentingPopover = true
+    
+    public init() {}
     
     // callback functoin when user interacts with display area
     private func onMonitorClick(_ event: MonitorEvent) -> Void {
@@ -74,7 +77,7 @@ struct CalculatorView: View {
         currentDisplay = calculator.displayedValue
     }
     
-    var body: some View {
+    public var body: some View {
         ZStack {
             Color.black.edgesIgnoringSafeArea(.all)
             VStack(alignment: .trailing, spacing: 30.0){

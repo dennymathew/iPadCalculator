@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CalculatorKit
 
 // the size and gap of buttons, to be calculated in run time based on screen size
 // the strategy to calculate the size of buttons, is to find the shortest side of the screen (height or width) and divide the total screen length by 7 (5 row of buttons + 2 rows of spacing)

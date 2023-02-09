@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import Calculator
+@testable import CalculatorKit
 
 final class CalculatorTests: XCTestCase {
 
