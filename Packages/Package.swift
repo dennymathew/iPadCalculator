@@ -17,16 +17,16 @@ let package = Package(
             name: "CalculatorKit",
             targets: ["CalculatorKit"]
         ),
-        .library(
-            name: "DangerDeps",
-            type: .dynamic,
-            targets: ["DangerDependencies"]
-        ), // dev
+//        .library(
+//            name: "DangerDeps",
+//            type: .dynamic,
+//            targets: ["DangerDependencies"]
+//        ), // dev
     ],
     dependencies: [
         // Danger Plugins
-        .package(url: "https://github.com/danger/swift.git", from: "3.0.0"), // dev
-        .package(url: "https://github.com/f-meloni/danger-swift-coverage", from: "0.1.0") // dev
+//        .package(url: "https://github.com/danger/swift.git", from: "3.13.0"), // dev
+//        .package(url: "https://github.com/f-meloni/danger-swift-coverage", from: "0.1.0") // dev
     ],
     targets: [
         .target(
@@ -41,12 +41,12 @@ let package = Package(
             name: "CalculatorKitTests",
             dependencies: ["CalculatorKit"]
         ),
-        .target(
-            name: "DangerDependencies",
-            dependencies: [
-                .product(name: "Danger", package: "swift"),
-                .product(name: "DangerSwiftCoverage", package: "danger-swift-coverage")
-            ]
-        ), // dev
+//        .target(
+//            name: "DangerDependencies",
+//            dependencies: [
+//                .product(name: "Danger", package: "swift"),
+//                .product(name: "DangerSwiftCoverage", package: "danger-swift-coverage")
+//            ]
+//        ), // dev
     ]
 )
