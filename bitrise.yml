@@ -43,7 +43,6 @@ workflows:
         - project_path: $BITRISE_PROJECT_PATH
         - scheme: $BITRISE_SCHEME
         - test_repetition_mode: retry_on_failure
-    - fastlane lane tasks_for_pull_request
     - cache-push@2: {}
     - deploy-to-bitrise-io@2: {}
 meta:

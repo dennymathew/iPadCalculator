@@ -7,8 +7,6 @@
 
 import Foundation
 
-import Foundation
-
 public struct Calculator {
     private var selectedKey: KeyType? = nil
     private var result: Double = 0
