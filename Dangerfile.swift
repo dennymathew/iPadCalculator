@@ -1,8 +1,8 @@
 import Danger
 
 xcov.report(
-   scheme: 'Calculator',
-   workspace: 'Calculator.xcworkspace',
+   scheme: "Calculator",
+   workspace: "Calculator.xcworkspace",
    minimum_coverage_percentage: 60
 )
 
