@@ -1,4 +1,9 @@
 import Danger
+import DangerSwiftCoverage // package: https://github.com/f-meloni/danger-swift-coverage.git
+
+Coverage.xcodeBuildCoverage(.derivedDataFolder("Build"),
+                            minimumCoverage: 50,
+                            excludedTargets: ["DangerSwiftCoverageTests.xctest"])
 
 let danger = Danger()
 
