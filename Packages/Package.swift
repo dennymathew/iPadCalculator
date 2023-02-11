@@ -5,27 +5,17 @@ import PackageDescription
 
 let package = Package(
     name: "Packages",
+    defaultLocalization: "en",
     platforms: [
         .iOS(.v16)
     ],
     products: [
-        .library(
-            name: "CalculatorUI",
-            targets: ["CalculatorUI"]
-        ),
-        .library(
-            name: "CalculatorKit",
-            targets: ["CalculatorKit"]
-        ),
-//        .library(
-//            name: "DangerDeps",
-//            type: .dynamic,
-//            targets: ["DangerDependencies"]
-//        ), // dev
+        .library(name: "CalculatorUI", targets: ["CalculatorUI"]),
+        .library(name: "CalculatorKit", targets: ["CalculatorKit"]),
+        .library(name: "DangerDeps", type: .dynamic, targets: ["DangerDependencies"]), // dev
     ],
     dependencies: [
-        // Danger Plugins
-//        .package(url: "https://github.com/danger/swift.git", from: "3.13.0"), // dev
+        .package(url: "https://github.com/danger/swift.git", from: "3.12.3"), // dev
 //        .package(url: "https://github.com/f-meloni/danger-swift-coverage", from: "0.1.0") // dev
     ],
     targets: [
@@ -41,12 +31,12 @@ let package = Package(
             name: "CalculatorKitTests",
             dependencies: ["CalculatorKit"]
         ),
-//        .target(
-//            name: "DangerDependencies",
-//            dependencies: [
-//                .product(name: "Danger", package: "swift"),
+        .target(
+            name: "DangerDependencies",
+            dependencies: [
+                .product(name: "Danger", package: "swift"),
 //                .product(name: "DangerSwiftCoverage", package: "danger-swift-coverage")
-//            ]
-//        ), // dev
+            ]
+        ), // dev
     ]
 )
