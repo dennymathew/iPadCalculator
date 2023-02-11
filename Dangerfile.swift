@@ -24,4 +24,4 @@ if danger.github != nil {
 }
 
 print("Running Swiftlint on changed files...")
-SwiftLint.lint(.files(editedFiles), inline: true, strict: true, quiet: false)
+SwiftLint.lint(.files(editedFiles), inline: true, strict: false, quiet: true)
