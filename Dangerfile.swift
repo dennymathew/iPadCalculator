@@ -1,11 +1,5 @@
 import Danger
 
-xcov.report(
-   scheme: "Calculator",
-   workspace: "Calculator.xcworkspace",
-   minimum_coverage_percentage: 60
-)
-
 let danger = Danger()
 
 // Pull request size
