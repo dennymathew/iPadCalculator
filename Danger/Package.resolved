@@ -30,7 +30,7 @@
     {
       "identity" : "swift",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/danger/swift.git",
+      "location" : "https://github.com/danger/swift",
       "state" : {
         "revision" : "0a4b52f4518974cbd2cc45c29d33cb54a303f81d",
         "version" : "3.15.0"

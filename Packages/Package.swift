@@ -12,12 +12,6 @@ let package = Package(
     products: [
         .library(name: "CalculatorUI", targets: ["CalculatorUI"]),
         .library(name: "CalculatorKit", targets: ["CalculatorKit"]),
-        .library(name: "DangerDeps", type: .dynamic, targets: ["DangerDependencies"]), // dev
-    ],
-    dependencies: [
-        .package(url: "https://github.com/danger/swift", from: "3.12.3"), // dev
-//        .package(url: "https://github.com/fastlane-community/danger-xcov", from: "0.5.0"), // dev
-        .package(url: "https://github.com/f-meloni/danger-swift-coverage", from: "1.2.1")
     ],
     targets: [
         .target(
@@ -32,13 +26,5 @@ let package = Package(
             name: "CalculatorKitTests",
             dependencies: ["CalculatorKit"]
         ),
-        .target(
-            name: "DangerDependencies",
-            dependencies: [
-                .product(name: "Danger", package: "swift"),
-//                .product(name: "xcov", package: "danger-xcov")
-                .product(name: "DangerSwiftCoverage", package: "danger-swift-coverage")
-            ]
-        ), // dev
     ]
 )
