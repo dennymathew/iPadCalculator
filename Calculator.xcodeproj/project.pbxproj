@@ -36,14 +36,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B0057ABB29958C2D0037EE15 /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				B0057ABC29958C2D0037EE15 /* Packages */,
-			);
-			name = Packages;
-			sourceTree = "<group>";
-		};
 		B0057ABD29958D920037EE15 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -54,9 +46,9 @@
 		B0E8CDAA298AF6CB00AF07D8 = {
 			isa = PBXGroup;
 			children = (
-				B0057AC4299590500037EE15 /* Calculator.xctestplan */,
-				B0057ABB29958C2D0037EE15 /* Packages */,
+				B0057ABC29958C2D0037EE15 /* Packages */,
 				B0E8CDB5298AF6CB00AF07D8 /* Calculator */,
+				B0057AC4299590500037EE15 /* Calculator.xctestplan */,
 				B0E8CDB4298AF6CB00AF07D8 /* Products */,
 				B0057ABD29958D920037EE15 /* Frameworks */,
 			);
