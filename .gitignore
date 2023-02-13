@@ -2,3 +2,4 @@
 Danger/.build
 Calculator.xcodeproj/project.xcworkspace/xcuserdata
 *.xcuserstate
+Danger/.swiftpm/xcode/xcuserdata

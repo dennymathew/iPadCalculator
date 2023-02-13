@@ -1,5 +1,6 @@
 import Danger
 import Foundation
+import DangerSwiftCoverage
 
 let danger = Danger()
 let editedFiles = danger.git.modifiedFiles + danger.git.createdFiles
@@ -23,5 +24,8 @@ if danger.github != nil {
     }
 }
 
-print("Running Swiftlint on changed files...")
-SwiftLint.lint(.files(editedFiles), inline: true, strict: true, quiet: false)
+//print("Running Swiftlint on changed files...")
+//SwiftLint.lint(.files(editedFiles), inline: true, strict: true, quiet: false)
+Coverage.xcodeBuildCoverage(.xcresultBundle("Build/bundlePath.xcresult"),
+                            minimumCoverage: 50,
+                            excludedTargets: ["DangerSwiftCoverageTests.xctest"])

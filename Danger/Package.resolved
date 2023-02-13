@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "danger-swift-coverage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/f-meloni/danger-swift-coverage",
+      "state" : {
+        "revision" : "6a21a6e595e2b13443428942ce128b3ba6b827ee",
+        "version" : "1.2.1"
+      }
+    },
+    {
       "identity" : "logger",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/shibapm/Logger",
