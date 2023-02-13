@@ -16,7 +16,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/danger/swift.git", from: "3.12.3"), // dev
-//        .package(url: "https://github.com/f-meloni/danger-swift-coverage", from: "0.1.0") // dev
+        .package(url: "https://github.com/fastlane-community/danger-xcov.git", from: "0.5.0") // dev
     ],
     targets: [
         .target(
@@ -35,7 +35,7 @@ let package = Package(
             name: "DangerDependencies",
             dependencies: [
                 .product(name: "Danger", package: "swift"),
-//                .product(name: "DangerSwiftCoverage", package: "danger-swift-coverage")
+                .product(name: "danger-xcov", package: "danger-xcov")
             ]
         ), // dev
     ]

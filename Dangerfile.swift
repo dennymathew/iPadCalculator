@@ -1,5 +1,6 @@
 import Danger
 import Foundation
+import xcov
 
 let danger = Danger()
 let editedFiles = danger.git.modifiedFiles + danger.git.createdFiles
@@ -23,5 +24,18 @@ if danger.github != nil {
     }
 }
 
-print("Running Swiftlint on changed files...")
-SwiftLint.lint(.files(editedFiles), inline: true, strict: false, quiet: true)
+//print("Running Swiftlint on changed files...")
+//SwiftLint.lint(.files(editedFiles), inline: true, strict: false, quiet: true)
+
+print("Generating code coverage report...")
+# Generate report
+report = xcov.produce_report(
+  scheme: "Calculator",
+  project: "Calculator.xcodeproj",
+  minimum_coverage_percentage: 50
+)
+
+# Do some custom filtering with the report here
+
+# Post markdown report
+xcov.output_report(report)
