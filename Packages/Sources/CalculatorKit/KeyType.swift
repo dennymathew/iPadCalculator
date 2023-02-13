@@ -6,7 +6,7 @@
 //
 
 import Foundation
-enum KeyType {
+public enum KeyType {
     case plus
     case minus
     case multiply
