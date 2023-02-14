@@ -276,6 +276,7 @@ PLATFORMS
   arm64-darwin-22
 
 DEPENDENCIES
+  danger
   danger-slather
   fastlane
 
