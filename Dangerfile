@@ -6,7 +6,7 @@ declared_trivial = github.pr_title.include? "#trivial"
 warn("PR is classed as Work in Progress") if github.pr_title.include? "[WIP]"
 
 # Warn when there is a big PR
-warn("Big PR") if git.lines_of_code > 500
+warn("Big PR") if git.lines_of_code > 100
 
 # Don't let testing shortcuts get into master by accident
 fail("fdescribe left in tests") if `grep -r fdescribe specs/ `.length > 1
@@ -22,7 +22,11 @@ slather.configure("Calculator.xcodeproj", "Calculator", options: {
     #"**/MarvelAPIManager.swift"
   #],
   ci_service: :bitrise,
+  coverage_access_token: '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'
   coverage_service: :terminal,
+  input_format: 'profdata',
+  decimals: 2,
+  post: true
 })
 
 slather.notify_if_coverage_is_less_than(minimum_coverage: 80)
