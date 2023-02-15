@@ -22,7 +22,7 @@ slather.configure("Calculator.xcodeproj", "Calculator", options: {
     #"**/MarvelAPIManager.swift"
   #],
   ci_service: :bitrise,
-  coverage_access_token: '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'
+  coverage_access_token: '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',
   coverage_service: :terminal,
   input_format: 'profdata',
   decimals: 2,
