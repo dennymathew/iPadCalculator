@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "089FAB84-AD0C-49AA-BCCB-93A22FA52E5D",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Packages",
+        "identifier" : "CalculatorKitTests",
+        "name" : "CalculatorKitTests"
+      }
+    }
+  ],
+  "version" : 1
+}

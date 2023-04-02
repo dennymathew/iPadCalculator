@@ -7,9 +7,7 @@
 
 import Foundation
 
-import Foundation
-
-struct Calculator {
+public struct Calculator {
     private var selectedKey: KeyType? = nil
     private var result: Double = 0
     private var inputs: String =  ""
@@ -22,7 +20,7 @@ struct Calculator {
     private let decimalFormatter = NumberFormatter()
     private let scientificFormatter = NumberFormatter()
     
-    init() {
+    public init() {
         decimalFormatter.numberStyle = .decimal
         decimalFormatter.groupingSeparator = ","
         decimalFormatter.maximumIntegerDigits = maxInput
@@ -31,7 +29,7 @@ struct Calculator {
         scientificFormatter.maximumSignificantDigits = maxInput + 1
     }
     
-    var displayedValue: String {
+    public var displayedValue: String {
         get {
             if isError && inputs.isEmpty {
                 return "Error"
@@ -67,13 +65,13 @@ struct Calculator {
         }
     }
     
-    var computedValue: Double {
+    public var computedValue: Double {
         get {
             0
         }
     }
     
-    mutating func onPressDigit(_ number: Int) {
+    public mutating func onPressDigit(_ number: Int) {
         print("Input number", number)
         if inputs.isEmpty {
             if number != 0 {
@@ -90,7 +88,7 @@ struct Calculator {
         }
     }
     
-    mutating func onPressDot() {
+    public mutating func onPressDot() {
         print("dot typed")
         guard !inputs.contains(".") else {
             return
@@ -104,7 +102,7 @@ struct Calculator {
         }
     }
     
-    mutating func onAC() {
+    public mutating func onAC() {
         print("AC")
         self.result = 0
         self.inputs.removeAll()
@@ -114,7 +112,7 @@ struct Calculator {
         self.lastInput = 0
     }
     
-    mutating func onPressOperator(_ selectedKey: KeyType) {
+    public mutating func onPressOperator(_ selectedKey: KeyType) {
         print("operator", selectedKey)
         self.selectedKey = selectedKey
         let inputNumber = Double(inputs) ?? 0
@@ -124,7 +122,7 @@ struct Calculator {
         inputs.removeAll()
     }
     
-    mutating func onCalculate() {
+    public mutating func onCalculate() {
         print("calculate")
         var inputNumber = Double(inputs) ?? 0
         if isNegative {
@@ -164,7 +162,7 @@ struct Calculator {
         }
     }
     
-    mutating func onPlusMinus() {
+    public mutating func onPlusMinus() {
         print("plusminus")
         if result != 0 {
             result = -result
@@ -173,7 +171,7 @@ struct Calculator {
         }
     }
     
-    mutating func onPercentage() {
+    public mutating func onPercentage() {
         print("percentage")
         lastInput = Double(inputs) ?? 0
         if isNegative {
@@ -191,7 +189,7 @@ struct Calculator {
         }
     }
     
-    mutating func onDelete() {
+    public mutating func onDelete() {
         print("onDelete")
         guard !inputs.isEmpty else {
             return
@@ -200,7 +198,7 @@ struct Calculator {
         print(inputs)
     }
     
-    mutating func onPaste(_ content: String) {
+    public mutating func onPaste(_ content: String) {
         var parsedContent: Double? = Double(content)
         guard parsedContent != nil else {
             return
