@@ -1,2 +1,2 @@
 # iPadCalculator
-A simple calculator for iPad
+A simple calculator for iPad.
